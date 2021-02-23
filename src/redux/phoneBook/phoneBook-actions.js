@@ -1,13 +1,10 @@
 import { createAction } from '@reduxjs/toolkit';
+import types from './phoneBook-constants';
 
-const DELETE = 'phoneBook/Delete';
-const ADD = 'phoneBook/Add';
-const CHANGE_FILTER = 'phoneBook/ChangeFilter';
+const addContact = createAction(types.ADD);
 
-const addContact = createAction(ADD);
+const deleteContact = createAction(types.DELETE);
 
-const deleteContact = createAction(DELETE);
-
-const changeFilter = createAction(CHANGE_FILTER);
+const changeFilter = createAction(types.CHANGE_FILTER);
 
 export default { addContact, deleteContact, changeFilter };
